@@ -42,5 +42,15 @@ app.get('/api/health', (req, res) => {
 initDB().then(() => {
   app.listen(PORT, '0.0.0.0', () => {
     console.log(`\n🏀  EID HOOP FEST API → http://0.0.0.0:${PORT}\n`);
+    
+    // AUTO-PING POUR ÉVITER LA VEILLE RENDER (Toutes les 10 minutes)
+    setInterval(async () => {
+      try {
+        await fetch('https://eid-back.onrender.com/api/health');
+        console.log('[Auto-Ping] Serveur maintenu éveillé');
+      } catch (err) {
+        console.error('[Auto-Ping] Erreur :', err.message);
+      }
+    }, 10 * 60 * 1000); // 10 minutes
   });
 }).catch(console.error);
