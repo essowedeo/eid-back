@@ -1,0 +1,47 @@
+{
+  "teams": [
+    { "id": 1, "name": "Sokodé Warriors", "captainName": "Abdoul", "phone": "90010203", "code": "WAR001", "secretCode": "0000", "paid": true, "createdAt": "2026-04-23T01:00:00Z" },
+    { "id": 2, "name": "Tchaoudjo Kings", "captainName": "Fofana", "phone": "91020304", "code": "KIN002", "secretCode": "0000", "paid": true, "createdAt": "2026-04-23T01:01:00Z" },
+    { "id": 3, "name": "Central Ballers", "captainName": "Issa", "phone": "92030405", "code": "BAL003", "secretCode": "0000", "paid": false, "createdAt": "2026-04-23T01:02:00Z" },
+    { "id": 4, "name": "Kparatao Stars", "captainName": "Moussa", "phone": "93040506", "code": "STA004", "secretCode": "0000", "paid": true, "createdAt": "2026-04-23T01:03:00Z" },
+    { "id": 5, "name": "Komah Dunkers", "captainName": "Saliou", "phone": "94050607", "code": "DUN005", "secretCode": "0000", "paid": false, "createdAt": "2026-04-23T01:04:00Z" },
+    { "id": 6, "name": "Didaouré Hawks", "captainName": "Rachid", "phone": "95060708", "code": "HAW006", "secretCode": "0000", "paid": true, "createdAt": "2026-04-23T01:05:00Z" },
+    { "id": 7, "name": "Barrière Bulls", "captainName": "Malick", "phone": "96070809", "code": "BUL007", "secretCode": "0000", "paid": true, "createdAt": "2026-04-23T01:06:00Z" },
+    { "id": 8, "name": "Kouloundè Knights", "captainName": "Zaid", "phone": "97080910", "code": "KNI008", "secretCode": "0000", "paid": false, "createdAt": "2026-04-23T01:07:00Z" },
+    { "id": 9, "name": "Albia Giants", "captainName": "Yassin", "phone": "98091011", "code": "GIA009", "secretCode": "0000", "paid": true, "createdAt": "2026-04-23T01:08:00Z" },
+    { "id": 10, "name": "Kadambara Titans", "captainName": "Oumar", "phone": "99101112", "code": "TIT010", "secretCode": "0000", "paid": false, "createdAt": "2026-04-23T01:09:00Z" },
+    { "id": 11, "name": "Lama-Tessi Lions", "captainName": "Ibrahim", "phone": "90111213", "code": "LIO011", "secretCode": "0000", "paid": true, "createdAt": "2026-04-23T01:10:00Z" },
+    { "id": 12, "name": "Salimdè Sharks", "captainName": "Bassirou", "phone": "91121314", "code": "SHA012", "secretCode": "0000", "paid": true, "createdAt": "2026-04-23T01:11:00Z" }
+  ],
+  "players": [
+    { "id": 1, "teamId": 1, "name": "Abdoul", "phone": "90010203", "status": "confirmed", "isCaptain": true, "joinedAt": "2026-04-23T01:00:00Z" },
+    { "id": 2, "teamId": 2, "name": "Fofana", "phone": "91020304", "status": "confirmed", "isCaptain": true, "joinedAt": "2026-04-23T01:01:00Z" },
+    { "id": 3, "teamId": 3, "name": "Issa", "phone": "92030405", "status": "confirmed", "isCaptain": true, "joinedAt": "2026-04-23T01:02:00Z" },
+    { "id": 4, "teamId": 4, "name": "Moussa", "phone": "93040506", "status": "confirmed", "isCaptain": true, "joinedAt": "2026-04-23T01:03:00Z" },
+    { "id": 5, "teamId": 5, "name": "Saliou", "phone": "94050607", "status": "confirmed", "isCaptain": true, "joinedAt": "2026-04-23T01:04:00Z" },
+    { "id": 6, "teamId": 6, "name": "Rachid", "phone": "95060708", "status": "confirmed", "isCaptain": true, "joinedAt": "2026-04-23T01:05:00Z" },
+    { "id": 7, "teamId": 7, "name": "Malick", "phone": "96070809", "status": "confirmed", "isCaptain": true, "joinedAt": "2026-04-23T01:06:00Z" },
+    { "id": 8, "teamId": 8, "name": "Zaid", "phone": "97080910", "status": "confirmed", "isCaptain": true, "joinedAt": "2026-04-23T01:07:00Z" },
+    { "id": 9, "teamId": 9, "name": "Yassin", "phone": "98091011", "status": "confirmed", "isCaptain": true, "joinedAt": "2026-04-23T01:08:00Z" },
+    { "id": 10, "teamId": 10, "name": "Oumar", "phone": "99101112", "status": "confirmed", "isCaptain": true, "joinedAt": "2026-04-23T01:09:00Z" },
+    { "id": 11, "teamId": 11, "name": "Ibrahim", "phone": "90111213", "status": "confirmed", "isCaptain": true, "joinedAt": "2026-04-23T01:10:00Z" },
+    { "id": 12, "teamId": 12, "name": "Bassirou", "phone": "91121314", "status": "confirmed", "isCaptain": true, "joinedAt": "2026-04-23T01:11:00Z" }
+  ],
+  "concours": [
+    { "id": 1, "name": "Karim", "phone": "90001122", "type": "Dunk", "paid": true, "createdAt": "2026-04-23T01:20:00Z" },
+    { "id": 2, "name": "Ismael", "phone": "91002233", "type": "Dunk", "paid": true, "createdAt": "2026-04-23T01:21:00Z" },
+    { "id": 3, "name": "Djibril", "phone": "92003344", "type": "Dunk", "paid": false, "createdAt": "2026-04-23T01:22:00Z" },
+    { "id": 4, "name": "Hamza", "phone": "93004455", "type": "Dunk", "paid": true, "createdAt": "2026-04-23T01:23:00Z" },
+    { "id": 5, "name": "Aziz", "phone": "94005566", "type": "Dunk", "paid": false, "createdAt": "2026-04-23T01:24:00Z" },
+    { "id": 6, "name": "Yao", "phone": "95006677", "type": "Dunk", "paid": true, "createdAt": "2026-04-23T01:25:00Z" },
+    { "id": 7, "name": "Sami", "phone": "96007788", "type": "3 Points", "paid": true, "createdAt": "2026-04-23T01:26:00Z" },
+    { "id": 8, "name": "Koffi", "phone": "97008899", "type": "3 Points", "paid": true, "createdAt": "2026-04-23T01:27:00Z" },
+    { "id": 9, "name": "Lamine", "phone": "98009900", "type": "3 Points", "paid": false, "createdAt": "2026-04-23T01:28:00Z" },
+    { "id": 10, "name": "Tidiane", "phone": "99000011", "type": "3 Points", "paid": true, "createdAt": "2026-04-23T01:29:00Z" },
+    { "id": 11, "name": "Ali", "phone": "90001133", "type": "3 Points", "paid": true, "createdAt": "2026-04-23T01:30:00Z" },
+    { "id": 12, "name": "Bachir", "phone": "91002244", "type": "3 Points", "paid": false, "createdAt": "2026-04-23T01:31:00Z" }
+  ],
+  "nextTeamId": 13,
+  "nextPlayerId": 13,
+  "nextConcoursId": 13
+}
