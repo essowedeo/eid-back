@@ -11,20 +11,27 @@ function generateCode() {
 // GET /api/teams — liste publique
 router.get('/', async (req, res) => {
   try {
+    const isAdmin = req.query.admin === 'true';
     const teams = await Team.findAll({ include: Player });
     const result = teams.map(t => {
       const team = t.toJSON();
-      return {
+      const data = {
         id: team.id,
         name: team.name,
         captainName: team.captainName,
         code: team.code,
-        // secretCode intentionnellement exclu de la liste publique
         createdAt: team.createdAt,
         paid: team.paid || false,
         playerCount: team.Players.length,
         confirmedCount: team.Players.filter(p => p.status === 'confirmed').length,
       };
+      
+      // Inclure le code secret si on est en mode admin
+      if (isAdmin) {
+        data.secretCode = team.secretCode;
+      }
+      
+      return data;
     });
     res.json(result);
   } catch (err) {
@@ -190,10 +197,10 @@ router.put('/:code/pay', async (req, res) => {
   }
 });
 
-// DELETE /api/teams/:id — supprimer une équipe
-router.delete('/:id', async (req, res) => {
+// DELETE /api/teams/:code — supprimer une équipe
+router.delete('/:code', async (req, res) => {
   try {
-    const team = await Team.findByPk(req.params.id);
+    const team = await Team.findOne({ where: { code: req.params.code.toUpperCase() } });
     if (!team) return res.status(404).json({ error: 'Équipe introuvable' });
     
     // Sequelize CASCADE will delete players automatically
