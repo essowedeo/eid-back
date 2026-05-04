@@ -12,10 +12,10 @@ router.post('/', async (req, res) => {
     }
 
     // Bloquer la double inscription au même concours
-    const alreadyIn = await Concours.findOne({ 
-      where: { phone: phone.trim(), type } 
+    const alreadyIn = await Concours.findOne({
+      where: { phone: phone.trim(), type }
     });
-    
+
     if (alreadyIn) {
       return res.status(400).json({ error: `Tu es déjà inscrit(e) au concours "${type}"` });
     }
@@ -83,7 +83,7 @@ router.delete('/:id', async (req, res) => {
   try {
     const challenger = await Concours.findByPk(req.params.id);
     if (!challenger) return res.status(404).json({ error: 'Inscrit introuvable' });
-    
+
     await challenger.destroy();
     res.json({ success: true, message: 'Inscrit supprimé' });
   } catch (err) {
@@ -96,10 +96,10 @@ router.put('/:id/pay', async (req, res) => {
   try {
     const challenger = await Concours.findByPk(req.params.id);
     if (!challenger) return res.status(404).json({ error: 'Inscrit introuvable' });
-    
+
     challenger.paid = !challenger.paid; // Toggle
     await challenger.save();
-    
+
     res.json({ message: 'Statut de paiement mis à jour', paid: challenger.paid });
   } catch (err) {
     res.status(500).json({ error: "Erreur serveur" });
