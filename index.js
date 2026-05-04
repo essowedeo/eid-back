@@ -4,6 +4,7 @@ import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 import teamsRouter from './routes/teams.js';
 import concoursRouter from './routes/concours.js';
+import { initDB } from './db.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const app = express();
@@ -36,6 +37,9 @@ app.get('/api/health', (req, res) => {
   res.json({ status: 'ok', tournament: 'EID HOOP FEST' });
 });
 
-app.listen(PORT, '0.0.0.0', () => {
-  console.log(`\n🏀  EID HOOP FEST API → http://0.0.0.0:${PORT}\n`);
-});
+// Démarrage
+initDB().then(() => {
+  app.listen(PORT, '0.0.0.0', () => {
+    console.log(`\n🏀  EID HOOP FEST API → http://0.0.0.0:${PORT}\n`);
+  });
+}).catch(console.error);
