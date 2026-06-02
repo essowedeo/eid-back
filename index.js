@@ -4,6 +4,7 @@ import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 import teamsRouter from './routes/teams.js';
 import concoursRouter from './routes/concours.js';
+import photosRouter from './routes/photos.js';
 import { initDB } from './db.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -32,6 +33,7 @@ app.use(express.json({ limit: '10kb' })); // Prevent large payload attacks
 // Routes
 app.use('/api/teams', teamsRouter);
 app.use('/api/concours', concoursRouter);
+app.use('/api/photos', photosRouter);
 
 // Health
 app.get('/api/health', (req, res) => {
