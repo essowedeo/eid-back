@@ -7,7 +7,7 @@ const router = Router();
 // Configuration will be set when the user provides the Cloud Name
 // We use process.env to allow flexibility
 cloudinary.config({ 
-  cloud_name: process.env.CLOUDINARY_CLOUD_NAME || 'REMPLACER_PAR_LE_CLOUD_NAME', 
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME || 'dybuucpok', 
   api_key: process.env.CLOUDINARY_API_KEY || '129191592221355', 
   api_secret: process.env.CLOUDINARY_API_SECRET || 'E3lrXL2gMwMQjJk7C2sTSFEjNfc' 
 });
